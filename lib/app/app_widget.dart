@@ -7,7 +7,9 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerDelegate: Modular.routerDelegate,
+      routeInformationParser: Modular.routeInformationParser,
       title: 'Yu-Gi-Oh Cards',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
@@ -17,6 +19,6 @@ class AppWidget extends StatelessWidget {
           key: CardScaffold.instance.key,
         );
       },
-    ).modular();
+    );
   }
 }

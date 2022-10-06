@@ -2,11 +2,11 @@ import 'package:deck/app/components/scaffold_state.dart';
 import 'package:deck/app/components/snackbar_component.dart';
 import 'package:deck/app/domain/errors/errors.dart';
 import 'package:deck/app/domain/model/card_model.dart';
+import 'package:deck/app/domain/repositories/card_repository.dart';
 import 'package:deck/app/helpers/const.dart';
-import 'package:deck/app/infra/datasource/card_datasource.dart';
 import 'package:dio/dio.dart';
 
-class CardDatasourceImpl implements CardDatasource {
+class CardDatasourceImpl implements CardRepository {
   final Dio dio;
 
   CardDatasourceImpl(this.dio);
